@@ -1,38 +1,357 @@
-.App {
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lato:wght@300;400;700&display=swap');
+
+/* Global Resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body and HTML */
+body, html {
+  font-family: 'Lato', sans-serif;
+  height: 100%;
+  background-color: #f8f9fa; /* Light background */
+}
+
+/* Global Heading and Paragraph Styles */
+h2 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 2.2em;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+/* Section Layout */
+.section {
+  min-height: calc(100vh - 80px); /* Ensure minimum height */
+  padding-top: 80px; /* Prevent overlap with fixed navbar */
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: column; /* Default to column layout for small screens */
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.image-container {
+  max-width: 300px;
+  margin-bottom: 20px;
+}
+
+.profile-pic {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-text {
+  max-width: 600px;
+  text-align: left;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #ffffff;
+  padding: 20px 50px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  height: 80px; /* Fixed height for consistent spacing */
+}
+
+/* Navbar brand inside the navbar */
+.navbar-brand {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #0d6e54;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  flex-grow: 1;
+  text-align: center; /* Center the brand on small screens */
+}
+
+.navbar-brand:hover {
+  color: #0b533d;
+}
+
+/* Navbar brand below the navbar */
+.navbar-brand-large {
+  font-family: 'Roboto', sans-serif;
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #0d6e54;
+  text-decoration: none;
+  margin-left: 95px;
+}
+
+.navbar-brand-large:hover {
+  color: #0b533d;
+}
+
+/* Hamburger menu */
+.hamburger {
+  font-size: 2em;
+  background: none;
+  border: none;
+  color: #333;
+  cursor: pointer;
+  display: none; /* Initially hidden */
+}
+
+/* Navigation Links */
+.nav-links {
+  display: none;
+}
+
+.nav-links.open {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 80px; /* Align with navbar */
+  left: 0;
+  width: 100%;
+  background-color: #f1e4e4;
+}
+
+.nav-links a {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2em;
+  color: #555;
+  padding: 15px 0;
+  text-align: center;
+  text-decoration: none;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Hover state for navigation links */
+.nav-links a:hover {
+  background-color: #f0f0f0;
+  color: #0b533d;
+}
+
+/* Active navigation link indicator */
+.nav-links .active {
+  color: #0d6e54; /* Change color for active link */
+  border-bottom: 2px solid #0d6e54; /* Add a bottom border */
+}
+
+/* Adjust hover style to prevent conflict with active state */
+.nav-links a:hover {
+  background-color: #f0f0f0;
+  color: #0b533d;
+  border-bottom: none; /* Ensure hover doesn't override active border */
+}
+
+/* Global Link Styles */
+a {
+  color: #0d6e54;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #0b533d;
+}
+
+/* Contact Container */
+.contact-container {
+  max-width: 600px;
+  margin: 80px auto;
+  padding: 20px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.contact-container h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.contact-container p {
+  font-size: 1.1em;
+  margin-bottom: 15px;
+}
+
+.contact-container a {
+  color: #0d6e54;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom 0.3s ease;
+}
+
+.contact-container a:hover {
+  border-bottom: 1px solid #0d6e54;
+}
+
+.contact-container ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.contact-container li {
+  margin-bottom: 10px;
+}
+
+/* Flexbox for large screens */
+@media (min-width: 1024px) {
+  .about-container {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 90%; /* Take up more width to adjust content alignment */
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .image-container {
+    margin-right: 40px; /* Space between image and text */
+    margin-bottom: 0;
+  }
+
+  .about-text {
+    max-width: 80%; /* Increase the width to take up more screen space */
+    text-align: left;
+  }
+
+  /* Hide the brand inside the navbar */
+  .navbar-brand {
+    display: none;
+  }
+
+  /* Show the brand wrapper */
+  .navbar-brand-wrapper {
+    display: block;
+    text-align: left;
+    padding-top: 90px; /* Adds space between navbar and brand */
+    width: 100%;
+  }
+
+  /* Adjust navbar alignment */
+  .navbar {
+    justify-content: flex-end; /* Keep links to the right */
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    background: none;
+    position: static;
+  }
+
+  .nav-links a {
+    padding: 0 20px;
+    margin-left: 20px;
+    color: #555;
+  }
+
+  /* Hover state for navigation links on large screens */
+  .nav-links a:hover {
+    background-color: transparent;
+    color: #0b533d;
+    border-bottom: 2px solid #0d6e54;
+  }
+
+  /* Active navigation link indicator on large screens */
+  .nav-links .active {
+    color: #0d6e54;
+    border-bottom: 2px solid #0d6e54;
+  }
+
+  /* Hide hamburger menu on large screens */
+  .hamburger {
+    display: none;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Mobile Adjustments */
+@media (max-width: 1023px) {
+  /* Show the brand inside the navbar */
+  .navbar-brand {
+    display: block;
+    font-size: 1.5em;
   }
-  to {
-    transform: rotate(360deg);
+
+  /* Center the brand in the navbar */
+  .navbar {
+    justify-content: center;
+    position: relative;
+  }
+
+  /* Position the hamburger menu */
+  .hamburger {
+    display: block;
+    position: absolute;
+    right: 20px;
+  }
+
+  .nav-links a {
+    font-size: 1em;
+  }
+
+  /* Hide the brand wrapper */
+  .navbar-brand-wrapper {
+    display: none;
+  }
+
+  /* Adjust section height on mobile */
+  .section {
+    min-height: calc(100vh - 80px); /* Ensure minimum height */
+    padding-top: 80px; /* To prevent content from being hidden under the navbar */
+    padding-bottom: 20px; /* Add some bottom padding */
+    height: auto;
+  }
+
+  /* Ensure the profile picture is at the top on mobile */
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Adjust margins for the image container */
+  .image-container {
+    margin-top: 20px; /* Add margin-top to push the image below the navbar */
+    margin-bottom: 20px;
+  }
+
+  /* Place the image at the top */
+  .about-container .image-container {
+    order: -1; /* Ensure the profile picture is first */
+  }
+
+  /* Adjust the about-text padding */
+  .about-text {
+    padding: 0 20px; /* Add horizontal padding */
+  }
+
+  /* Active navigation link indicator on mobile */
+  .nav-links .active {
+    color: #0d6e54;
+    background-color: #e0e0e0;
+  }
+
+  /* Adjust hover style on mobile */
+  .nav-links a:hover {
+    background-color: #f0f0f0;
+    color: #0b533d;
   }
 }
