@@ -10,32 +10,67 @@
 
 /* Body and HTML */
 body, html {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Roboto', sans-serif;
   height: 100%;
   background-color: #f8f9fa; /* Light background */
 }
 
 /* Global Heading and Paragraph Styles */
-h2 {
+h2, h3 {
   font-family: 'Roboto', sans-serif;
+  color: #333; /* Darker shade for headings */
+}
+
+h2 {
   font-size: 2.2em;
-  color: #444;
   margin-bottom: 15px;
 }
 
+h3 {
+  font-size: 1.6em;
+  margin-top: 20px;
+}
+
 p {
-  font-size: 1.1em;
-  line-height: 1.6;
-  color: #666;
-  margin-bottom: 15px;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.2em; /* Slightly increased size */
+  line-height: 1.75;
+  color: #444; /* Darker shade for text */
+  margin-bottom: 20px;
+}
+
+/* Links */
+a {
+  color: #0d6e54;
+  text-decoration: none;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+a:hover {
+  color: #0b533d;
+  border-bottom: 2px solid #0d6e54;
+}
+
+/* Button Style for CTAs */
+.btn {
+  background-color: #0d6e54;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+
+.btn:hover {
+  background-color: #0b533d;
 }
 
 /* Section Layout */
 .section {
-  min-height: calc(100vh - 80px); /* Ensure minimum height */
-  padding-top: 80px; /* Prevent overlap with fixed navbar */
+  min-height: calc(100vh - 80px);
+  padding-top: 80px;
   padding: 20px;
-  box-sizing: border-box;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -43,9 +78,8 @@ p {
 
 .about-container {
   display: flex;
-  flex-direction: column; /* Default to column layout for small screens */
+  flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
   width: 100%;
 }
 
@@ -58,10 +92,11 @@ p {
   width: 100%;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border: 2px solid #0d6e54;
 }
 
 .about-text {
-  max-width: 600px;
+  max-width: 700px; /* Increased width */
   text-align: left;
 }
 
@@ -76,32 +111,27 @@ p {
   align-items: center;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   z-index: 100;
-  height: 80px; /* Fixed height for consistent spacing */
+  height: 80px;
 }
 
-/* Navbar brand inside the navbar */
 .navbar-brand {
   font-family: 'Roboto', sans-serif;
   font-size: 1.8em;
   font-weight: bold;
   color: #0d6e54;
-  text-decoration: none;
-  transition: color 0.3s ease;
   flex-grow: 1;
-  text-align: center; /* Center the brand on small screens */
+  text-align: center;
 }
 
 .navbar-brand:hover {
   color: #0b533d;
 }
 
-/* Navbar brand below the navbar */
 .navbar-brand-large {
   font-family: 'Roboto', sans-serif;
   font-size: 2.5em;
   font-weight: bold;
   color: #0d6e54;
-  text-decoration: none;
   margin-left: 105px;
 }
 
@@ -109,14 +139,13 @@ p {
   color: #0b533d;
 }
 
-/* Hamburger menu */
 .hamburger {
   font-size: 2em;
   background: none;
   border: none;
   color: #333;
   cursor: pointer;
-  display: none; /* Initially hidden */
+  display: none;
 }
 
 /* Navigation Links */
@@ -128,7 +157,7 @@ p {
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 80px; /* Align with navbar */
+  top: 80px;
   left: 0;
   width: 100%;
   background-color: #f1e4e4;
@@ -140,8 +169,6 @@ p {
   color: #555;
   padding: 15px 0;
   text-align: center;
-  text-decoration: none;
-  transition: color 0.3s ease, background-color 0.3s ease;
 }
 
 /* Hover state for navigation links */
@@ -150,28 +177,9 @@ p {
   color: #0b533d;
 }
 
-/* Active navigation link indicator */
 .nav-links .active {
-  color: #0d6e54; /* Change color for active link */
-  border-bottom: 2px solid #0d6e54; /* Add a bottom border */
-}
-
-/* Adjust hover style to prevent conflict with active state */
-.nav-links a:hover {
-  background-color: #f0f0f0;
-  color: #0b533d;
-  border-bottom: none; /* Ensure hover doesn't override active border */
-}
-
-/* Global Link Styles */
-a {
   color: #0d6e54;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-a:hover {
-  color: #0b533d;
+  border-bottom: 2px solid #0d6e54;
 }
 
 /* Contact Container */
@@ -194,22 +202,10 @@ a:hover {
 
 .contact-container a {
   color: #0d6e54;
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
-  transition: border-bottom 0.3s ease;
 }
 
 .contact-container a:hover {
   border-bottom: 1px solid #0d6e54;
-}
-
-.contact-container ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.contact-container li {
-  margin-bottom: 10px;
 }
 
 /* Flexbox for large screens */
@@ -218,66 +214,42 @@ a:hover {
     flex-direction: row;
     align-items: flex-start;
     justify-content: flex-start;
-    width: 90%; /* Take up more width to adjust content alignment */
-    margin-left: auto;
-    margin-right: auto;
+    width: 90%;
+    margin: 0 auto;
   }
 
   .image-container {
-    margin-right: 40px; /* Space between image and text */
-    margin-bottom: 0;
+    margin-right: 40px;
   }
 
   .about-text {
-    max-width: 80%; /* Increase the width to take up more screen space */
+    max-width: 80%;
     text-align: left;
   }
 
-  /* Hide the brand inside the navbar */
   .navbar-brand {
     display: none;
   }
 
-  /* Show the brand wrapper */
   .navbar-brand-wrapper {
     display: block;
-    text-align: left;
-    padding-top: 90px; /* Adds space between navbar and brand */
+    padding-top: 90px;
     width: 100%;
   }
 
-  /* Adjust navbar alignment */
   .navbar {
-    justify-content: flex-end; /* Keep links to the right */
+    justify-content: flex-end;
   }
 
   .nav-links {
     display: flex;
     flex-direction: row;
-    background: none;
-    position: static;
   }
 
   .nav-links a {
     padding: 0 20px;
-    margin-left: 20px;
-    color: #555;
   }
 
-  /* Hover state for navigation links on large screens */
-  .nav-links a:hover {
-    background-color: transparent;
-    color: #0b533d;
-    border-bottom: 2px solid #0d6e54;
-  }
-
-  /* Active navigation link indicator on large screens */
-  .nav-links .active {
-    color: #0d6e54;
-    border-bottom: 2px solid #0d6e54;
-  }
-
-  /* Hide hamburger menu on large screens */
   .hamburger {
     display: none;
   }
@@ -285,19 +257,15 @@ a:hover {
 
 /* Mobile Adjustments */
 @media (max-width: 1023px) {
-  /* Show the brand inside the navbar */
   .navbar-brand {
     display: block;
     font-size: 1.5em;
   }
 
-  /* Center the brand in the navbar */
   .navbar {
     justify-content: center;
-    position: relative;
   }
 
-  /* Position the hamburger menu */
   .hamburger {
     display: block;
     position: absolute;
@@ -308,50 +276,35 @@ a:hover {
     font-size: 1em;
   }
 
-  /* Hide the brand wrapper */
-  .navbar-brand-wrapper {
-    display: none;
-  }
-
-  /* Adjust section height on mobile */
   .section {
-    min-height: calc(100vh - 80px); /* Ensure minimum height */
-    padding-top: 80px; /* To prevent content from being hidden under the navbar */
-    padding-bottom: 20px; /* Add some bottom padding */
-    height: auto;
+    min-height: calc(100vh - 80px);
+    padding-top: 80px;
+    padding-bottom: 20px;
   }
 
-  /* Ensure the profile picture is at the top on mobile */
   .about-container {
     flex-direction: column;
     align-items: center;
   }
 
-  /* Adjust margins for the image container */
   .image-container {
-    margin-top: 20px; /* Add margin-top to push the image below the navbar */
+    margin-top: 20px;
     margin-bottom: 20px;
   }
 
-  /* Place the image at the top */
   .about-container .image-container {
-    order: -1; /* Ensure the profile picture is first */
+    order: -1;
   }
 
-  /* Adjust the about-text padding */
   .about-text {
-    padding: 0 20px; /* Add horizontal padding */
+    padding: 0 20px;
   }
 
-  /* Active navigation link indicator on mobile */
   .nav-links .active {
-    color: #0d6e54;
     background-color: #e0e0e0;
   }
 
-  /* Adjust hover style on mobile */
   .nav-links a:hover {
     background-color: #f0f0f0;
-    color: #0b533d;
   }
 }

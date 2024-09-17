@@ -1,4 +1,3 @@
-// App.js
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-dom';
 import About from './About';
@@ -9,57 +8,36 @@ import Contact from './Contact';
 const App = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setMenuOpen(!isMenuOpen);
-  };
-
-  const closeMenu = () => {
-    setMenuOpen(false);
-  };
+  const toggleMenu = () => setMenuOpen(!isMenuOpen);
+  const closeMenu = () => setMenuOpen(false);
 
   return (
     <Router>
       <div>
         <header className="navbar">
-          {/* Brand in Navbar */}
-          <NavLink to="/" className="navbar-brand" onClick={closeMenu}>Erica Peterson</NavLink>
-
-          {/* Hamburger Menu for Mobile */}
-          <button className="hamburger" onClick={toggleMenu}>
-            ☰
-          </button>
-
+          <NavLink to="/" className="navbar-brand" onClick={closeMenu}>
+            Erica Peterson
+          </NavLink>
+          <button className="hamburger" onClick={toggleMenu}>☰</button>
           <nav className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
-            <NavLink
-              to="/what-ive-done"
-              onClick={closeMenu}
-              className={({ isActive }) => (isActive ? 'active' : '')}
-            >
+            <NavLink to="/what-ive-done" onClick={closeMenu} className={({ isActive }) => (isActive ? 'active' : '')}>
               What I've Done
             </NavLink>
-            <NavLink
-              to="/consulting"
-              onClick={closeMenu}
-              className={({ isActive }) => (isActive ? 'active' : '')}
-            >
+            <NavLink to="/consulting" onClick={closeMenu} className={({ isActive }) => (isActive ? 'active' : '')}>
               Consulting
             </NavLink>
-            <NavLink
-              to="/contact"
-              onClick={closeMenu}
-              className={({ isActive }) => (isActive ? 'active' : '')}
-            >
+            <NavLink to="/contact" onClick={closeMenu} className={({ isActive }) => (isActive ? 'active' : '')}>
               Contact
             </NavLink>
           </nav>
         </header>
 
-        {/* Brand Below Navbar for Large Screens */}
         <div className="navbar-brand-wrapper">
-          <NavLink to="/" className="navbar-brand-large" onClick={closeMenu}>Erica Peterson</NavLink>
+          <NavLink to="/" className="navbar-brand-large" onClick={closeMenu}>
+            Erica Peterson
+          </NavLink>
         </div>
 
-        {/* Routes */}
         <div className="section">
           <Routes>
             <Route path="/" element={<About />} />
