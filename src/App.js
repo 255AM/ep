@@ -1,6 +1,5 @@
-// App.js
 import React, { useState } from 'react';
-import { HashRouter as Router, Routes, Route, NavLink } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, NavLink } from 'react-router-dom'; // Make sure to use HashRouter
 import About from './About';
 import WhatIveDone from './WhatIveDone';
 import Consulting from './Consulting';
