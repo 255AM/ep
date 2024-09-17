@@ -30,14 +30,15 @@ const Consulting = () => (
       <h3>Current Interests</h3>
       
       <p>Besides the above, I’m trying to figure out the answers to two huge (unrelated) questions:</p>
-        <ol>
-          <li>
-            How can local newsrooms work smarter to provide the information their communities need about judicial elections — in ways that clearly explain the stakes?
-          </li>
-          <li>
-            What are the time-tested best-practices for newsrooms to tackle their culture, both bottom-up and top-down? How could providing reporters and newsroom leaders clear, actionable steps to take improve the sustainability outlook for these organizations?
-          </li>
-        </ol>
+        
+          
+            <p>1: How can local newsrooms work smarter to provide the information their communities need about judicial elections — in ways that clearly explain the stakes?</p>
+          
+          
+            <p>2: What are the time-tested best-practices for newsrooms to tackle their culture, both bottom-up and top-down? How could providing reporters and newsroom leaders clear, 
+              actionable steps to take improve the sustainability outlook for these organizations?</p>
+          
+        
       
       <p>If you're interested, <Link to="/contact">get in touch</Link>!</p>
     </div>
