@@ -20,15 +20,17 @@ const WhatIveDone = () => (
       <p>
         <strong>Currently</strong>, I’m wearing lots of hats. Since June 2024, I’ve been working with newsrooms across the country to help them create local 
         voter guides and access free election resources through a grant from the John S. and James L. Knight Foundation. (Read some of the coverage of that 
-        initiative <a href="https://rjionline.org/news/key-questions-to-consider-when-building-voter-guides/" target="_blank" rel="noopener noreferrer" className="btn">here</a> and 
-        <a href="https://www.ire.org/product/ire-journal-q3-2024/" target="_blank" rel="noopener noreferrer" className="btn">here</a>). I’m an editor-at-large for <a href="https://mountainstatespotlight.org/" target="_blank" rel="noopener noreferrer" className="btn">Mountain State Spotlight,</a> 
-        and the digital managing editor for <a href="https://www.100daysinappalachia.com/" target="_blank" rel="noopener noreferrer" className="btn">100 Days in Appalachia. </a>
-        I’m also a contract editor for <a href="https://futuretodayinstitute.com/" target="_blank" rel="noopener noreferrer" className="btn">Future Today Institute,</a> working to make sure their annual Trend Report is clear, accurate, and accessible to readers around the world.
+        initiative <a href="https://rjionline.org/news/key-questions-to-consider-when-building-voter-guides/" target="_blank" rel="noopener noreferrer" >here</a> and 
+        <a href="https://www.ire.org/product/ire-journal-q3-2024/" target="_blank" rel="noopener noreferrer" >here</a>). I’m an editor-at-
+        large for <a href="https://mountainstatespotlight.org/" target="_blank" rel="noopener noreferrer" >Mountain State Spotlight,</a> 
+        and the digital managing editor for <a href="https://www.100daysinappalachia.com/" target="_blank" rel="noopener noreferrer" >100 Days in Appalachia. </a>
+        I’m also a contract editor for <a href="https://futuretodayinstitute.com/" target="_blank" rel="noopener noreferrer" >Future Today Institute,</a> working to make sure their annual Trend Report is clear, accurate, and accessible to readers around the world.
       </p>
       <p>
         I live outside Louisville, Kentucky with my husband and two sons.
       </p>
-      <p><a href="public/resume.pdf" target="_blank" rel="noopener noreferrer" className="btn">Click here for my resume</a></p>
+      <p><a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="btn">Click here for my resume</a></p>
+
     </div>
   </div>
 );
