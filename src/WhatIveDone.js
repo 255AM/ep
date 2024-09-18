@@ -22,7 +22,7 @@ const WhatIveDone = () => (
         voter guides and access free election resources through a grant from the John S. and James L. Knight Foundation. (Read some of the coverage of that 
         initiative <a href="https://rjionline.org/news/key-questions-to-consider-when-building-voter-guides/" target="_blank" rel="noopener noreferrer" >here</a> and 
         <a href="https://www.ire.org/product/ire-journal-q3-2024/" target="_blank" rel="noopener noreferrer" > here</a>). I’m an editor-at-
-        large for <a href="https://mountainstatespotlight.org/" target="_blank" rel="noopener noreferrer" >Mountain State Spotlight,</a> 
+        large for <a href="https://mountainstatespotlight.org/" target="_blank" rel="noopener noreferrer" >Mountain State Spotlight, </a> 
         and the digital managing editor for <a href="https://www.100daysinappalachia.com/" target="_blank" rel="noopener noreferrer" >100 Days in Appalachia. </a>
         I’m also a contract editor for <a href="https://futuretodayinstitute.com/" target="_blank" rel="noopener noreferrer" >Future Today Institute,</a> working to make sure their annual Trend Report is clear, accurate, and accessible to readers around the world.
       </p>
