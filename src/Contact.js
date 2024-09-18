@@ -5,7 +5,7 @@ const Contact = () => (
     <h2>Contact</h2>
     <p>
       Email me at <a href="mailto:erica.m.peterson@gmail.com">erica.m.peterson@gmail.com</a>, or reach out on 
-      <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer"> LinkedIn</a>.
+      <a href="https://www.linkedin.com/in/ericampeterson" target="_blank" rel="noopener noreferrer"> LinkedIn</a>.
     </p>
   </div>
 );
