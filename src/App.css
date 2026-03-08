@@ -153,6 +153,10 @@ a:hover {
   padding: 20px;
 }
 
+.page-shell {
+  min-height: calc(100vh - 140px);
+}
+
 /* About Container */
 .about-container {
   display: flex;
@@ -181,6 +185,10 @@ a:hover {
   padding: 0 20px;
 }
 
+.about-text h2 {
+  margin-bottom: 24px;
+}
+
 /* Contact Container */
 .contact-container {
   max-width: 600px;
@@ -197,6 +205,10 @@ a:hover {
 .contact-container p {
   font-size: 1.1em;
   margin-bottom: 15px;
+}
+
+.contact-container a {
+  font-weight: 700;
 }
 
 .contact-container a {
@@ -247,6 +259,10 @@ a:hover {
   /* Adjust section margin to account for navbar and large brand */
   .section {
     margin-top: 60px; /* Adjust based on navbar and large brand height */
+  }
+
+  .page-shell {
+    padding-bottom: 60px;
   }
 
   /* Remove absolute positioning from large brand */
@@ -331,5 +347,9 @@ a:hover {
   /* Adjust section margin-top */
   .section {
     margin-top: 120px; /* Height of the navbar */
+  }
+
+  .page-shell {
+    min-height: calc(100vh - 120px);
   }
 }

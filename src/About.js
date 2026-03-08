@@ -1,5 +1,5 @@
 import React from 'react';
-import profilePic from './ep.jpg'; // Replace with your image path
+import profilePic from './ep.jpg';
 import './App.css';
 
 const About = () => (
@@ -8,6 +8,7 @@ const About = () => (
       <img src={profilePic} alt="Profile" className="profile-pic" />
     </div>
     <div className="about-text">
+      <h2>About</h2>
       <p>
       I’m an experienced reporter, editor and newsroom leader who excels at elevating reporters’ work to serve readers and listeners. 
       During my time at nonprofit newsrooms, working in both radio and digital media, my work has been honored with an

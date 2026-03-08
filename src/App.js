@@ -8,6 +8,13 @@ import Contact from './Contact';
 const App = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
 
+  const pages = [
+    { path: '/', label: 'About', element: <About /> },
+    { path: '/what-ive-done', label: "What I've Done", element: <WhatIveDone /> },
+    { path: '/consulting', label: 'Consulting', element: <Consulting /> },
+    { path: '/contact', label: 'Contact', element: <Contact /> },
+  ];
+
   const toggleMenu = () => setMenuOpen(!isMenuOpen);
   const closeMenu = () => setMenuOpen(false);
 
@@ -20,15 +27,16 @@ const App = () => {
           </NavLink>
           <button className="hamburger" onClick={toggleMenu}>☰</button>
           <nav className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
-            <NavLink to="/what-ive-done" onClick={closeMenu} className={({ isActive }) => (isActive ? 'active' : '')}>
-              What I've Done
-            </NavLink>
-            <NavLink to="/consulting" onClick={closeMenu} className={({ isActive }) => (isActive ? 'active' : '')}>
-              Consulting
-            </NavLink>
-            <NavLink to="/contact" onClick={closeMenu} className={({ isActive }) => (isActive ? 'active' : '')}>
-              Contact
-            </NavLink>
+            {pages.map((page) => (
+              <NavLink
+                key={page.path}
+                to={page.path}
+                onClick={closeMenu}
+                className={({ isActive }) => (isActive ? 'active' : '')}
+              >
+                {page.label}
+              </NavLink>
+            ))}
           </nav>
         </header>
 
@@ -39,14 +47,13 @@ const App = () => {
           </NavLink>
         </div>
 
-        <div className="section">
+        <main className="section page-shell">
           <Routes>
-            <Route path="/" element={<About />} />
-            <Route path="/what-ive-done" element={<WhatIveDone />} />
-            <Route path="/consulting" element={<Consulting />} />
-            <Route path="/contact" element={<Contact />} />
+            {pages.map((page) => (
+              <Route key={page.path} path={page.path} element={page.element} />
+            ))}
           </Routes>
-        </div>
+        </main>
       </div>
     </Router>
   );
