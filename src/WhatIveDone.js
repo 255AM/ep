@@ -6,11 +6,11 @@ const WhatIveDone = () => (
       <h2>What I've Done</h2>
       <p>
         As a <strong>reporter</strong>, I built environment and energy beats at two public radio stations: West Virginia Public Broadcasting and Louisville Public Media. In two places where the 
-        energy and economy was reliant on coal, my years of reporting revealed the real-world effects of lawmakers’ inactions on coalfield residents. More recently, I’ve done data-driven 
+        energy sector and economy were reliant on coal, my years of reporting revealed the real-world effects of lawmakers' inaction on coalfield residents. More recently, I have done data-driven 
         investigations into West Virginia’s child welfare system for Mountain State Spotlight.
       </p>
       <p>
-        As an <strong>editor</strong>, I’ve worked with students, staff reporters and freelancers from concept to publication on everything from spot news to podcasts to investigations.
+        As an <strong>editor</strong>, I have worked with students, staff reporters, and freelancers from concept to publication on everything from spot news to podcasts to investigations.
       </p>
       <p>
         As a <strong>newsroom leader</strong>, I led the large local, regional and investigative team at 
