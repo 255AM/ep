@@ -25,8 +25,16 @@ const App = () => {
           <NavLink to="/" className="navbar-brand" onClick={closeMenu}>
             Erica Peterson
           </NavLink>
-          <button className="hamburger" onClick={toggleMenu}>☰</button>
-          <nav className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
+          <button
+            className="hamburger"
+            onClick={toggleMenu}
+            aria-label="Toggle navigation menu"
+            aria-expanded={isMenuOpen}
+            aria-controls="primary-nav"
+          >
+            ☰
+          </button>
+          <nav id="primary-nav" className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
             {pages.map((page) => (
               <NavLink
                 key={page.path}
@@ -39,13 +47,6 @@ const App = () => {
             ))}
           </nav>
         </header>
-
-        {/* Large brand/logo outside the navbar */}
-        <div className="large-brand-container">
-          <NavLink to="/" className="navbar-brand-large" onClick={closeMenu}>
-            Erica Peterson
-          </NavLink>
-        </div>
 
         <main className="section page-shell">
           <Routes>

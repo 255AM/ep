@@ -1,5 +1,19 @@
 /* Importing Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lato:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Source+Sans+3:wght@400;500;600;700&display=swap');
+
+:root {
+  --bg: #f5f5ef;
+  --surface: #ffffff;
+  --text: #1f2a28;
+  --muted-text: #3f4a47;
+  --brand: #0d6e54;
+  --brand-dark: #0a4f3d;
+  --line: #d5ddd9;
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 40px;
+}
 
 /* Global Resets */
 * {
@@ -10,95 +24,98 @@
 
 /* Body and HTML */
 body, html {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Source Sans 3', sans-serif;
   height: 100%;
-  background-color: #f8f9fa;
+  color: var(--text);
+  background-color: var(--bg);
 }
 
 /* Global Heading and Paragraph Styles */
 h2, h3 {
-  font-family: 'Roboto', sans-serif;
-  color: #333;
+  font-family: 'Merriweather', serif;
+  color: var(--text);
+  letter-spacing: 0.01em;
 }
 
 h2 {
-  font-size: 2.2em;
-  margin-bottom: 15px;
+  font-size: clamp(2rem, 3vw, 2.6rem);
+  margin-bottom: var(--space-3);
 }
 
 h3 {
-  font-size: 1.6em;
-  margin-top: 20px;
+  font-size: clamp(1.2rem, 2vw, 1.45rem);
+  margin-top: var(--space-3);
+  margin-bottom: var(--space-2);
 }
 
 p {
-  font-family: 'Lato', sans-serif;
-  font-size: 1.2em;
-  line-height: 1.75;
-  color: #444;
-  margin-bottom: 20px;
+  font-size: clamp(1.06rem, 1.2vw, 1.14rem);
+  line-height: 1.72;
+  color: var(--muted-text);
+  margin-bottom: var(--space-3);
 }
 
 /* Links */
 a {
-  color: #0d6e54;
+  color: var(--brand);
   text-decoration: none;
-  transition: color 0.3s ease, border-bottom 0.3s ease;
+  transition: color 0.25s ease, border-bottom 0.25s ease;
 }
 
 a:hover {
-  color: #0b533d;
-  border-bottom: 2px solid #0d6e54;
+  color: var(--brand-dark);
+  border-bottom: 2px solid var(--brand);
 }
 
 /* Button Style for CTAs */
 .btn {
-  background-color: #0d6e54;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 5px;
+  background-color: var(--brand);
+  color: #ffffff;
+  padding: 11px 22px;
+  border-radius: 8px;
   text-decoration: none;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.25s ease, transform 0.2s ease;
   display: inline-block;
+  font-weight: 600;
 }
 
 .btn:hover {
-  background-color: #0b533d;
+  background-color: var(--brand-dark);
+  transform: translateY(-1px);
 }
 
 /* Navbar */
 .navbar {
   background-color: #ffffff;
-  padding: 20px 50px;
+  padding: var(--space-3) 50px;
   position: fixed;
   top: 0;
   width: 100%;
   display: flex;
   align-items: center;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 24px rgba(20, 40, 34, 0.08);
   z-index: 1000;
   height: 80px;
 }
 
 .navbar-brand {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Merriweather', serif;
   font-size: 1.8em;
   font-weight: bold;
-  color: #0d6e54;
+  color: var(--brand);
   flex-grow: 1;
   text-align: center;
-  
 }
-
-
 
 .hamburger {
   font-size: 2em;
   background: none;
   border: none;
-  color: #333;
+  color: var(--text);
   cursor: pointer;
   display: none;
+  min-width: 44px;
+  min-height: 44px;
 }
 
 .nav-links {
@@ -112,49 +129,54 @@ a:hover {
   top: 80px;
   left: 0;
   width: 100%;
-  background-color: #f1e4e4;
+  background-color: #f8faf8;
+  border-bottom: 1px solid var(--line);
 }
 
 .nav-links a {
-  font-family: 'Roboto', sans-serif;
-  font-size: 1.2em;
-  color: #555;
-  padding: 15px 0;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 1.12rem;
+  color: #30403c;
+  padding: 13px 0;
   text-align: center;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
 /* Hover state for navigation links */
 .nav-links a:hover {
-  background-color: #f0f0f0;
-  color: #0b533d;
+  background-color: #eef4f1;
+  color: var(--brand-dark);
 }
 
 .nav-links .active {
-  color: #0d6e54;
+  color: var(--brand);
   border-bottom: 2px solid #0d6e54;
-}
-
-/* Large Brand */
-.large-brand-container {
-  display: none; /* Hidden on small screens */
-  margin-top: 80px; /* Push below the navbar */
-  padding-left: 50px; /* Adjust for left alignment */
-}
-
-.navbar-brand-large {
-  font-family: 'Roboto', sans-serif;
-  font-size: 6em;
-  font-weight: bold;
-  color: #0d6e54;
 }
 
 /* Section Layout */
 .section {
-  padding: 20px;
+  padding: var(--space-3);
 }
 
 .page-shell {
   min-height: calc(100vh - 140px);
+  animation: page-enter 260ms ease-out;
+  background: linear-gradient(180deg, #f9f9f5 0%, var(--bg) 100%);
+}
+
+@keyframes page-enter {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* About Container */
@@ -168,7 +190,7 @@ a:hover {
 /* Image Limiter */
 .image-container {
   max-width: 300px;
-  margin-bottom: 20px;
+  margin-bottom: var(--space-3);
 }
 
 .profile-pic {
@@ -180,59 +202,52 @@ a:hover {
 
 /* About Text */
 .about-text {
-  max-width: 700px;
+  max-width: 68ch;
   text-align: left;
   padding: 0 20px;
 }
 
 .about-text h2 {
-  margin-bottom: 24px;
+  margin-bottom: var(--space-3);
+}
+
+.about-text p {
+  max-width: 68ch;
 }
 
 /* Contact Container */
 .contact-container {
-  max-width: 600px;
+  max-width: 68ch;
   margin: 80px auto;
-  padding: 20px;
+  padding: var(--space-3);
   text-align: center;
 }
 
 .contact-container h2 {
-  font-size: 2em;
-  margin-bottom: 20px;
+  margin-bottom: var(--space-3);
 }
 
 .contact-container p {
-  font-size: 1.1em;
-  margin-bottom: 15px;
+  max-width: 55ch;
+  margin: 0 auto var(--space-2);
 }
 
 .contact-container a {
   font-weight: 700;
-  color: #0d6e54;
+  color: var(--brand);
 }
 
 .contact-container a:hover {
-  border-bottom: 1px solid #0d6e54;
+  border-bottom: 1px solid var(--brand);
 }
 
 /* Media Queries */
 
 /* Large Screens */
 @media (min-width: 1024px) {
-  /* Show the large brand container */
-  .large-brand-container {
-    display: block;
-  }
-
-  /* Hide the small navbar-brand inside the navbar */
-  .navbar-brand {
-    display: none;
-  }
-
   /* Adjust navbar */
   .navbar {
-    justify-content: flex-end;
+    justify-content: space-between;
   }
 
   /* Show nav links in navbar */
@@ -242,10 +257,31 @@ a:hover {
     position: static;
     width: auto;
     background-color: transparent;
+    border-bottom: none;
+    gap: var(--space-2);
   }
 
   .nav-links a {
-    padding: 0 20px;
+    padding: 0 var(--space-1);
+    background-color: transparent;
+  }
+
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 2px;
+    background: var(--brand);
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.2s ease;
+  }
+
+  .nav-links a:hover::after,
+  .nav-links .active::after {
+    transform: scaleX(1);
   }
 
   /* Hide hamburger menu */
@@ -260,13 +296,7 @@ a:hover {
 
   .page-shell {
     padding-bottom: 60px;
-  }
-
-  /* Remove absolute positioning from large brand */
-  .large-brand-container {
-    position: relative;
-    margin-top: 80px; /* Height of navbar */
-    padding-left: 50px; /* Left alignment */
+    background: linear-gradient(180deg, #fafaf7 0%, var(--bg) 100%);
   }
 
   /* Adjust About Container for large screens */
@@ -276,15 +306,16 @@ a:hover {
     justify-content: flex-start;
     width: 90%;
     margin: 0 auto;
+    gap: var(--space-4);
   }
 
   .image-container {
-    margin-right: 40px;
+    margin-right: 0;
     margin-bottom: 0; /* Remove bottom margin in row layout */
   }
 
   .about-text {
-    max-width: 80%;
+    max-width: 68ch;
     text-align: left;
     padding: 0;
   }
@@ -292,22 +323,11 @@ a:hover {
 
 /* Small Screens */
 @media (max-width: 1023px) {
-  /* Hide the large brand container */
-  .large-brand-container {
-    display: none;
-  }
-
-  /* Show the small navbar-brand inside the navbar */
-  .navbar-brand {
-    display: block;
-  }
-  
 
   .navbar a, .navbar a.active {
     text-decoration: none;
     border-bottom: none !important; /* Remove the bottom border */
   }
-
 
   /* Show hamburger menu */
   .hamburger {
@@ -323,8 +343,8 @@ a:hover {
 
   /* Nav links */
   .nav-links a {
-    font-size: 1em;
-    
+    font-size: 1rem;
+    padding: 14px var(--space-2);
   }
 
   /* About Container remains columnar */
@@ -343,10 +363,12 @@ a:hover {
 
   /* Adjust section margin-top */
   .section {
-    margin-top: 120px; /* Height of the navbar */
+    margin-top: 106px;
+    padding: var(--space-2);
   }
 
   .page-shell {
     min-height: calc(100vh - 120px);
+    background: transparent;
   }
 }
