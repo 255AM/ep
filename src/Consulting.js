@@ -5,6 +5,7 @@ const Consulting = () => (
   <div className="about-container">
     <div className="about-text">
       <h2>Consulting</h2>
+      <br />
       <h3>Processes and Strategy</h3>
       <p>
       Are you launching a new newsroom? Revamping an existing one? I can help you through creating the key editorial processes and tools you’ll need, from a customized 
@@ -32,10 +33,10 @@ const Consulting = () => (
       <p>Besides the above, I’m trying to figure out the answers to two huge (unrelated) questions:</p>
         
           
-            <p>1: How can local newsrooms work smarter to provide the information their communities need about judicial elections — in ways that clearly explain the stakes?</p>
+            <p><span style={{ fontWeight: 'bold' }}>1:</span> How can local newsrooms work smarter to provide the information their communities need about judicial elections — in ways that clearly explain the stakes?</p>
           
           
-            <p>2: What are the time-tested best-practices for newsrooms to tackle their culture, both bottom-up and top-down? How could providing reporters and newsroom leaders clear, 
+            <p><span style={{ fontWeight: 'bold' }}>2:</span> What are the time-tested best-practices for newsrooms to tackle their culture, both bottom-up and top-down? How could providing reporters and newsroom leaders clear, 
               actionable steps to take improve the sustainability outlook for these organizations?</p>
           
         

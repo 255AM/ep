@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { HashRouter as Router, Routes, Route, NavLink } from 'react-router-dom'; // Make sure to use HashRouter
+import { HashRouter as Router, Routes, Route, NavLink } from 'react-router-dom';
 import About from './About';
 import WhatIveDone from './WhatIveDone';
 import Consulting from './Consulting';
@@ -32,7 +32,8 @@ const App = () => {
           </nav>
         </header>
 
-        <div className="navbar-brand-wrapper">
+        {/* Large brand/logo outside the navbar */}
+        <div className="large-brand-container">
           <NavLink to="/" className="navbar-brand-large" onClick={closeMenu}>
             Erica Peterson
           </NavLink>
